@@ -35,13 +35,13 @@ cacheSolve <- function(x, ...) {
         
         invert <- x$getinverse()
         
-        if(!is.null(inv)) {
+        if(!is.null(invert)) {
                 message("retrieving cached data")
                 return(invert)
         } ## end if
         
         data <- x$get()
-        invertt <- Solve(Data)
+        invertt <- solve(data)
         x$setinverse(invert)
         
         invert
@@ -49,9 +49,12 @@ cacheSolve <- function(x, ...) {
 } ## end function cacheSolve
 
 
-## sample matrix (Fibonacci Sequence)
-X = matrix(c(0, 1, 2, 3, 5, 8, 13, 21, 34), nrow = 3, ncol = 3)
-X ## print matrix
-M = makeCacheMatrix(x) ## run function
-M ## print inverse matrix
-## M$get()
+## test with sample matrix (Fibonacci Sequence)
+M = matrix(c(0, 1, 2, 3, 5, 8, 13, 21, 34), nrow = 3, ncol = 3)
+## print matrix
+M
+## run 1st Function
+W = makeCacheMatrix(M)
+## run 2nd Function
+cacheSolve (W)
+
