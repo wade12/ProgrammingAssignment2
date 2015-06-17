@@ -58,3 +58,21 @@ M
 W = makeCacheMatrix(M)
 ## run 2nd Function
 cacheSolve (W)
+
+## test with sample matrix (Fibonacci Sequence)
+## M = matrix(c(0, 1, 2, 3, 5, 8, 13, 21, 34), nrow = 3, ncol = 3)
+## print matrix
+## M
+## [,1] [,2] [,3]
+## [1,]    0    3   13
+## [2,]    1    5   21
+## [3,]    2    8   34
+
+## run 1st Function
+## W = makeCacheMatrix(M)
+## run 2nd Function
+## cacheSolve (W)
+## [,1] [,2] [,3]
+## [1,]   -1   -1  1.0
+## [2,]   -4   13 -6.5
+## [3,]    1   -3  1.5
